@@ -5,8 +5,8 @@ const password = ref("password123");
 
 const supabase = useSupabaseClient();
 
-async function onSubmit() {
-  const {data, error} = await supabase.auth.signInWithPassword({
+async function onSubmit () {
+  const { data, error } = await supabase.auth.signInWithPassword({
     email: email.value,
     password: password.value
   });
@@ -25,15 +25,19 @@ async function onSubmit() {
   <div>
     <h1>Login</h1>
     <form @submit.prevent="onSubmit">
-      <input placeholder="Email address"
-             type="email"
-             required="required"
-             v-model="email"/>
-      <input placeholder="Password"
-             type="password"
-             required="required"
-             v-model="password"/>
-      <button type="submit">Login</button>
+      <a-input
+        v-model="email"
+        placeholder="Email address"
+        type="email"
+        required />
+      <a-input
+        v-model="password"
+        placeholder="Password"
+        type="password"
+        required />
+      <a-button type="submit">
+        Login
+      </a-button>
     </form>
   </div>
 </template>

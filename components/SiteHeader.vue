@@ -1,9 +1,8 @@
 ﻿<script setup lang="ts">
-
 const user = useSupabaseUser();
-const supabase=  useSupabaseClient();
+const supabase = useSupabaseClient();
 
-async function onLogout(){
+async function onLogout () {
   await supabase.auth.signOut();
   await navigateTo("/");
 }
@@ -13,18 +12,25 @@ async function onLogout(){
 <template>
   <header>
     <nav>
-
       <ul>
-        <li><nuxt-link to="/calendar">Calendar</nuxt-link></li>
+        <li>
+          <nuxt-link to="/calendar">
+            Calendar
+          </nuxt-link>
+        </li>
       </ul>
 
-    <template v-if="user">
-      <span>{{user.email}}</span>
-      <button @click="onLogout">Logout</button>
-    </template>
-    <template v-else>
-      <nuxt-link to="/login">Login</nuxt-link>
-    </template>
+      <template v-if="user">
+        <span>{{ user.email }}</span>
+        <a-button @click="onLogout">
+          Logout
+        </a-button>
+      </template>
+      <template v-else>
+        <a-button to="/login">
+          Login
+        </a-button>
+      </template>
     </nav>
   </header>
 </template>

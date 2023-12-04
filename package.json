@@ -7,13 +7,25 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "lint": "eslint --fix --ext .ts.vue",
+    "types": "supabase gen types typescript --project-id wskyzkjweqrpctmxifbk --schema public > types/supabase.ts"
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
+    "@nuxtjs/eslint-config-typescript": "^12.1.0",
+    "@nuxtjs/google-fonts": "^3.1.0",
     "@nuxtjs/supabase": "^1.1.4",
+    "@nuxtjs/tailwindcss": "^6.10.1",
+    "eslint": "^8.54.0",
+    "eslint-plugin-vue": "^9.19.1",
     "nuxt": "^3.8.2",
+    "supabase": "^1.115.4",
     "vue": "^3.3.8",
     "vue-router": "^4.2.5"
+  },
+  "dependencies": {
+    "@headlessui/vue": "^1.7.16",
+    "@heroicons/vue": "^2.0.18"
   }
 }

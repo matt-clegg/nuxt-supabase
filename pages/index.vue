@@ -5,7 +5,7 @@ const user = useSupabaseUser();
 <template>
   <h1>MCC Supabase Clone</h1>
   <client-only>
-    <pre>{{user}}</pre>
+    <pre>{{ user }}</pre>
   </client-only>
 </template>
 

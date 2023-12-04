@@ -1,0 +1,14 @@
+﻿<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="generate types" type="js.build_tools.npm">
+    <package-json value="$PROJECT_DIR$/package.json" />
+    <command value="run" />
+    <scripts>
+      <script value="types" />
+    </scripts>
+    <node-interpreter value="project" />
+    <envs>
+      <env name="SUPABASE_PROJECT_ID" value="wskyzkjweqrpctmxifbk" />
+    </envs>
+    <method v="2" />
+  </configuration>
+</component>
